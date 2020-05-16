@@ -29,11 +29,15 @@ Data loaded from S3, process the data into analytics tables using Spark, and loa
 
  - project.ipynb file  where the original data was read from the s3 bucket "s3a://udacity-dend/" some of the data was written on the another bucket and deleted after for the studying the original data and how much time it was taking
  
+ - project.html = html file of project.ipynb
+
  - .cfg is where all the key configuration info which can be access
 
  - testing.ipynb is the file where the elt.py file is tested with the local data upload to hdfs and read then the write the data to s3 
     (local data is used too avoid the much time the I/O was taking while paquet the files)
 
+ - testing.html = html file of testing.ipynb
+ 
     - local data upload to hdfs
       ![Sample Input](img/hdfs.PNG)
     
