@@ -130,7 +130,7 @@ def process_log_data(spark, input_data, output_data):
                   col('log.location').alias('location'),
                   col('log.userAgent').alias('user_agent'),
                   year('log.datetime').alias('year'),
-                  month('log.datetime').alias('month')).withColumn('songplay_id',monotonically_increasing_id())
+                  month('log.datetime').alias('month')).withColumn('songplay_id',monotonically_increasing_id()).dropDuplicates()
 
     # write songplays table to parquet files partitioned by year and month
     songplays_table.write.partitionBy('year','month').parquet(os.path.join(output_data,'songplays/songplays.parquet'),'overwrite')
