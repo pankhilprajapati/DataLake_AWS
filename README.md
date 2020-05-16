@@ -24,7 +24,9 @@ Data loaded from S3, process the data into analytics tables using Spark, and loa
  - time - timestamps of records in songplays broken down into specific units start_time, hour, day, week, month, year, weekday
 
 # Files
-
+```
+Note: ipynb file may not load in github but will load in notebook
+```
  - etl.py is where data reads from S3, processes that data using Spark, and writes them back to S3
 
  - project.ipynb file  where the original data was read from the s3 bucket "s3a://udacity-dend/" some of the data was written on the another bucket and deleted after for the studying the original data and how much time it was taking
